@@ -1,0 +1,36 @@
+ sumAndLookup> .\sum.exe -L20 -v2 -I 0.95
+2166
+benchmarking sumAndLookup/sumAndLookup
+analysing with 1000 resamples
+measurement overhead 333.7 μs
+bootstrapping with 72 of 321 samples (22%)
+time                 19.01 ns   (18.99 ns .. 19.02 ns, ci 0.950)
+                     1.000 R²   (1.000 R² .. 1.000 R², ci 0.950)
+mean                 19.03 ns   (18.97 ns .. 19.34 ns, ci 0.950)
+std dev              516.9 ps   (44.95 ps .. 1.216 ns, ci 0.950)
+found 2 outliers among 72 samples (2.8%)
+  1 (1.4%) high mild
+  1 (1.4%) high severe
+variance introduced by outliers: 46% (moderately inflated)
+
+ sumAndLookup> .\sum_mod.exe -L20 -v2 -I 0.95
+2166
+benchmarking sumAndLookup/sumAndLookup
+analysing with 1000 resamples
+measurement overhead 333.5 μs
+bootstrapping with 70 of 324 samples (21%)
+time                 16.34 ns   (16.30 ns .. 16.40 ns, ci 0.950)
+                     1.000 R²   (1.000 R² .. 1.000 R², ci 0.950)
+mean                 16.25 ns   (16.22 ns .. 16.30 ns, ci 0.950)
+std dev              162.5 ps   (115.8 ps .. 262.9 ps, ci 0.950)
+found 4 outliers among 70 samples (5.7%)
+  1 (1.4%) high mild
+  3 (4.3%) high severe
+variance introduced by outliers: 11% (moderately inflated)
+
+sum . map f [1..6]: 16,3% Speedup
+runtime ghc-8.4.1:
+time                 19.01 ns   (18.99 ns .. 19.02 ns, ci 0.950)    100%
+runtime with lookup table:
+time                 16.34 ns   (16.30 ns .. 16.40 ns, ci 0.950)     85%
+
