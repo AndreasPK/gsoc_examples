@@ -1,0 +1,34 @@
+ > .\vanilla.exe -L20 -v2 -I 0.95
+benchmarking fromEnum/single
+analysing with 1000 resamples
+measurement overhead 335.6 μs
+bootstrapping with 70 of 352 samples (19%)
+time                 4.084 ns   (4.083 ns .. 4.085 ns, ci 0.950)
+                     1.000 R²   (1.000 R² .. 1.000 R², ci 0.950)
+mean                 4.079 ns   (4.077 ns .. 4.088 ns, ci 0.950)
+std dev              13.79 ps   (6.570 ps .. 28.45 ps, ci 0.950)
+found 3 outliers among 70 samples (4.3%)
+  1 (1.4%) low mild
+  1 (1.4%) high mild
+  1 (1.4%) high severe
+variance introduced by outliers: 0% (unaffected)
+
+ > .\lookup.exe -L20 -v2 -I 0.95
+benchmarking fromEnum/single
+analysing with 1000 resamples
+measurement overhead 334.8 μs
+bootstrapping with 71 of 354 samples (20%)
+time                 3.841 ns   (3.833 ns .. 3.853 ns, ci 0.950)
+                     1.000 R²   (1.000 R² .. 1.000 R², ci 0.950)
+mean                 3.842 ns   (3.838 ns .. 3.851 ns, ci 0.950)
+std dev              25.40 ps   (13.33 ps .. 45.34 ps, ci 0.950)
+found 2 outliers among 71 samples (2.8%)
+  2 (2.8%) high severe
+variance introduced by outliers: 0% (unaffected)
+
+
+fromEnum F: 6,3% Speedup
+runtime ghc-8.4.1:
+time                 4.084 ns   (4.083 ns .. 4.085 ns, ci 0.950)    100%
+runtime with lookup table:
+time                 3.841 ns   (3.833 ns .. 3.853 ns, ci 0.950)     94%

@@ -1,0 +1,6 @@
+*.exe
+*.dump-asm
+*.dump-cmm
+*.dump-simpl
+*.hi
+*.o
