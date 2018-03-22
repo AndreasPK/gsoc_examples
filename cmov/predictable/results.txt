@@ -1,0 +1,31 @@
+cmov\predictable> .\predictable.exe -L20 -v2 -I 0.95
+1000
+benchmarking predictable
+analysing with 1000 resamples
+measurement overhead 327.5 μs
+bootstrapping with 70 of 201 samples (34%)
+time                 6.498 μs   (6.479 μs .. 6.514 μs, ci 0.950)
+                     1.000 R²   (1.000 R² .. 1.000 R², ci 0.950)
+mean                 6.435 μs   (6.419 μs .. 6.452 μs, ci 0.950)
+std dev              68.32 ns   (54.89 ns .. 84.76 ns, ci 0.950)
+found 4 outliers among 70 samples (5.7%)
+  2 (2.9%) low mild
+  2 (2.9%) high mild
+variance introduced by outliers: 8% (slightly inflated)
+
+cmov\predictable> .\predictable_mod.exe -L20 -v2 -I 0.95
+1000
+benchmarking predictable
+analysing with 1000 resamples
+measurement overhead 321.2 μs
+bootstrapping with 70 of 201 samples (34%)
+time                 6.533 μs   (6.513 μs .. 6.552 μs, ci 0.950)
+                     1.000 R²   (1.000 R² .. 1.000 R², ci 0.950)
+mean                 6.459 μs   (6.443 μs .. 6.475 μs, ci 0.950)
+std dev              66.97 ns   (54.87 ns .. 85.85 ns, ci 0.950)
+found 4 outliers among 70 samples (5.7%)
+  3 (4.3%) low mild
+  1 (1.4%) high mild
+variance introduced by outliers: 8% (slightly inflated)
+
+Speedup: -0.5% (got slightly slower)
