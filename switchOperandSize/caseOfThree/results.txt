@@ -1,0 +1,30 @@
+6330
+benchmarking opSize/caseOfThree
+analysing with 1000 resamples
+measurement overhead 333.5 μs
+bootstrapping with 93 of 312 samples (29%)
+time                 87.52 ns   (87.26 ns .. 87.84 ns, ci 0.950)
+                     1.000 R²   (1.000 R² .. 1.000 R², ci 0.950)
+mean                 87.42 ns   (87.31 ns .. 87.56 ns, ci 0.950)
+std dev              619.7 ps   (445.2 ps .. 833.2 ps, ci 0.950)
+found 8 outliers among 93 samples (8.6%)
+  2 (2.2%) high mild
+  6 (6.5%) high severe
+variance introduced by outliers: 1% (unaffected)
+
+6330
+benchmarking opSize/caseOfThree
+analysing with 1000 resamples
+measurement overhead 331.8 μs
+bootstrapping with 93 of 312 samples (29%)
+time                 86.24 ns   (85.55 ns .. 86.88 ns, ci 0.950)
+                     1.000 R²   (1.000 R² .. 1.000 R², ci 0.950)
+mean                 85.81 ns   (85.58 ns .. 86.08 ns, ci 0.950)
+std dev              1.224 ns   (1.004 ns .. 1.468 ns, ci 0.950)
+found 27 outliers among 93 samples (29.0%)
+  2 (2.2%) low severe
+  5 (5.4%) low mild
+  20 (21.5%) high severe
+variance introduced by outliers: 19% (moderately inflated)
+
+Speedup: 1,5%
