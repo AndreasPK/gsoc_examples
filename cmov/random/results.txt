@@ -1,0 +1,25 @@
+PS C:\shared\GSOC\Benchmarks\cmov\random> .\unpredictable.exe -L20 -v2 -I 0.95
+497
+benchmarking unpredictable
+analysing with 1000 resamples
+measurement overhead 327.6 μs
+bootstrapping with 71 of 201 samples (35%)
+time                 6.644 μs   (6.633 μs .. 6.653 μs, ci 0.950)
+                     1.000 R²   (1.000 R² .. 1.000 R², ci 0.950)
+mean                 6.605 μs   (6.595 μs .. 6.614 μs, ci 0.950)
+std dev              40.94 ns   (35.50 ns .. 46.77 ns, ci 0.950)
+variance introduced by outliers: 0% (unaffected)
+
+PS C:\shared\GSOC\Benchmarks\cmov\random> .\unpredictable_mod.exe -L20 -v2 -I 0.95
+497
+benchmarking unpredictable
+analysing with 1000 resamples
+measurement overhead 323.8 μs
+bootstrapping with 70 of 215 samples (32%)
+time                 3.292 μs   (3.272 μs .. 3.311 μs, ci 0.950)
+                     1.000 R²   (1.000 R² .. 1.000 R², ci 0.950)
+mean                 3.261 μs   (3.252 μs .. 3.269 μs, ci 0.950)
+std dev              37.03 ns   (31.60 ns .. 43.87 ns, ci 0.950)
+variance introduced by outliers: 9% (slightly inflated)
+
+Speedup:101,82%
