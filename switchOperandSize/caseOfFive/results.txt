@@ -1,0 +1,38 @@
+$ ../../gen.sh caseOfFive
+Compiling 'caseOfFive'
+Using 'stack --resolver=nightly exec -- ghc'
+Selected resolver: nightly-2018-03-23
+Selected resolver: nightly-2018-03-23
+Benchmarking unmodified version
+1555
+benchmarking opSize/caseOfFive
+analysing with 1000 resamples
+measurement overhead 334.7 μs
+bootstrapping with 79 of 331 samples (23%)
+time                 17.65 ns   (17.64 ns .. 17.68 ns, ci 0.950)
+                     1.000 R²   (1.000 R² .. 1.000 R², ci 0.950)
+mean                 17.62 ns   (17.61 ns .. 17.63 ns, ci 0.950)
+std dev              50.37 ps   (41.86 ps .. 63.61 ps, ci 0.950)
+found 7 outliers among 79 samples (8.9%)
+  4 (5.1%) low mild
+  3 (3.8%) high mild
+variance introduced by outliers: 0% (unaffected)
+
+Benchmarking modified version
+1555
+benchmarking opSize/caseOfFive
+analysing with 1000 resamples
+measurement overhead 335.2 μs
+bootstrapping with 79 of 331 samples (23%)
+time                 17.33 ns   (17.32 ns .. 17.33 ns, ci 0.950)
+                     1.000 R²   (1.000 R² .. 1.000 R², ci 0.950)
+mean                 17.31 ns   (17.30 ns .. 17.31 ns, ci 0.950)
+std dev              24.35 ps   (19.66 ps .. 31.05 ps, ci 0.950)
+found 8 outliers among 79 samples (10.1%)
+  2 (2.5%) low severe
+  4 (5.1%) low mild
+  1 (1.3%) high mild
+  1 (1.3%) high severe
+variance introduced by outliers: 0% (unaffected)
+
+Speedup: 1,8%
